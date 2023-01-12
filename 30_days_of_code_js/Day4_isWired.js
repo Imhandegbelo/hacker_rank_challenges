@@ -8,9 +8,10 @@
 */
 
 function isWeird(numb) {
+  // if numb is even, isEven = true; false otherwise
   let isEven = numb % 2 == 0 ? true : false;
-  console.log(numb);
-  console.log(isEven);
+  // console.log(numb);
+  // console.log(isEven);
 
   if (isEven) {
     if (numb >= 2 && numb <= 5) {
@@ -25,4 +26,7 @@ function isWeird(numb) {
   }
 }
 
+//test with random numbers every time the function is called
 isWeird(Math.ceil(Math.random() * 100));
+
+//DONE

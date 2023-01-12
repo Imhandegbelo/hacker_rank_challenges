@@ -4,6 +4,6 @@ const multiply = (n) => {
   }
 };
 
-multiply(2)
+multiply(2);
 
 // DONE
