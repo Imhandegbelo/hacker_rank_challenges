@@ -1,0 +1,3 @@
+## 10 DAYS OF JAVASCRIPT
+
+### Day 1
