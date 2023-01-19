@@ -33,8 +33,10 @@ Implement a function named factorial that has one parameter: an integer,`n` . It
 4. Print `area` as the first line of output and print `perimeter` as the second line of output.
 - Sample Input: `2.6`
 - Sample Output: 
-  ```21.237166338267002
-  16.336281798666924```
+  ```
+  21.237166338267002
+  16.336281798666924
+  ```
   
 ### Day 2 Conditional if_else
 
