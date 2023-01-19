@@ -20,37 +20,32 @@
         3. proportion of zeros
 */
 
-function getValues(size, args) {
+function getValues(args) {
   let pos = 0;
   let neg = 0;
   let zero = 0;
-  let arg_array = args.split(" ");
 
+  // iterate through the array and classify the elements accordingly
+  args.forEach((element) => {
+    if (element > 0) {
+      pos++;
+    } else if (element < 0) {
+      neg++;
+    } else {
+      zero++;
+    }
+  });
+  let pos_ratio = pos / args.length;
+  let neg_ratio = neg / args.length;
+  let zero_ratio = zero / args.length;
 
-  if (size === arg_array.length) {
-	// iterate through the array and classify the elements accordingly
-    arg_array.forEach((element) => {
-      if (element > 0) {
-        pos++;
-      } else if (element < 0) {
-        neg++;
-      } else {
-        zero++;
-      }
-    });
-	let pos_ratio = pos/arg_array.length;
-	let neg_ratio = neg/arg_array.length;
-	let zero_ratio = zero/arg_array.length;
-
-    console.log(`${pos_ratio.toFixed(6)}\n${neg_ratio.toFixed(6)}\n${zero_ratio.toFixed(6)}`);
-  } else {
-    console.log("Specified size of array not equal to 'actual size of array'");
-  }
+  console.log(
+    `${pos_ratio.toFixed(6)}\n${neg_ratio.toFixed(6)}\n${zero_ratio.toFixed(6)}`
+  );
 }
 
-let test_array = [9, -1, 25, 6, 3, 0, 0, -4, -8, -44];
+let test_array = [-1, 25, 6, 3, 0, 0, -4, -8, -44];
 
-getValues(9, "-1 25 6 3 0 0 -4 -8 -44");		//	3, 4 and 2
-
+getValues(test_array); //	3, 4 and 2
 
 // DONE

@@ -1,20 +1,22 @@
-function getSecondLargest(input) {
-    let input_array = input.split("")
+function getSecondLargest(nums) {
+  let num_array = nums.split(" ").sort((a, b) => a - b);
 
-  // find the max and set it to 0
-  let max = Math.max(...input_array);
+  // the max is the element at the last index after sorting
+  let max = num_array.slice(-1).toString();
 
-  for (let i = 0; i < input_array.length; i++) {
-    if (input_array[i] == max) {
-      input_array[i] = 0;
-    }
+  // make sure there are no duplicate max values
+  let array_length = num_array.length;
+
+  while (num_array[array_length - 1] == max) {
+    num_array.pop();
+    array_length--;
   }
 
-  // since the max element has been set to 0, new max is the second max
-  let second_max = Math.max(...input_array);
-  return second_max;
+  // return the last element as it is now the largest
+  return num_array.slice(-1).toString();
 }
 
-console.log(getSecondLargest("2 3 6 7 5"));
+console.log(getSecondLargest("2 3 5 6 6"));
+console.log(getSecondLargest("-2 -3 -6 -7 -5"));
 
 //DONE

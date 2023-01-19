@@ -1,20 +1,23 @@
-function getGrade(scores) {
-  if (scores > 25) {
-    return "A";
-  } else if (scores > 20) {
-    return "B";
-  } else if (scores > 15) {
-    return "C";
-  } else if (scores > 10) {
-    return "D";
-  } else if (scores > 5) {
-    return "E";
+function getGrade(score) {
+  let grade;
+  // Write your code here
+  if (score > 25) {
+    grade = "A";
+  } else if (score > 20) {
+    grade = "B";
+  } else if (score > 15) {
+    grade = "C";
+  } else if (score > 10) {
+    grade = "D";
+  } else if (score > 5) {
+    grade = "E";
   } else {
-    return "F";
+    grade = "F";
   }
+  return grade;
 }
 
 //Test
-console.log(getGrade(15))
+console.log(getGrade(15));
 
 //DONE

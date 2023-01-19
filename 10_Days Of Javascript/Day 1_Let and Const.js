@@ -1,10 +1,10 @@
-let PI = Math.PI;
+const PI = Math.PI;
 
 const area_Perimeter = (r) => {
   let area = PI * r * r;
   let perimeter = 2 * PI * r;
-  console.log(area);
-  console.log(perimeter);
+  console.log(`${area}\n${perimeter}`);
+  // console.log(perimeter);
 };
 
 

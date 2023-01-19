@@ -35,24 +35,17 @@
   output = 2
 */
 
-
 const getObjectKey = (obj) => {
-  // console.log(Object.values(obj).find((key) => obj[key] === "1"))
-
-  Object.entries(obj).forEach((el) => {
-    console.log(`from getObject funtion ${el[1]}`)
-    if (el[1] === 1) {
-      console.log(el)
-      return el[0];
+  // loop through the object as a key-value pair
+  for (let [key, value] of Object.entries(obj)) {
+    if (value == 1) {
+      return key;
     }
-  });
-  // console.log(obj[7]);
-}
+  }
+};
 
 function argument_list(size, ...args) {
-  // console.log(size);
-  // console.log(args);
-  const count = [];
+  const count = {};
 
   if (size != args.length) {
     console.log("Specified array size is not equal to 'actual array'");
@@ -66,11 +59,12 @@ function argument_list(size, ...args) {
         count[el] = 1;
       }
     }
-    console.log(count);
+    // console.log(count);
   }
-  // let return_value = getObjectKey(count);
-  // console.log(return_value);
+  let return_value = getObjectKey(count);
+  console.log(return_value);
 }
 
-let check = argument_list(12, 1, 12, 3, 12, 1, 1, 2, 3, 2, 2, 3, 7);
-let test_object = { 1: 3, 2: 3, 3: 3, 7: 1, 12: 2 };
+let check = argument_list(12, 1, 7, 3, 12, 1, 1, 2, 3, 2, 2, 3, 7);
+
+// DONE
